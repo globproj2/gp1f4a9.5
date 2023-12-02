@@ -16,3 +16,13 @@ spec:
                         port:
                              number: 4000 # Port intern del servei. Ingress enruta cap aquest port qualsevol connexió des de fora del cluster i del host.
                                           # Ha de ser per tant igual al valor spec -> ports -> port indicat al manifest del servei.
+     - host: www.k8sllaunes.net
+       http:
+            paths:
+            - path: /
+              pathType: Prefix
+              backend:
+                   service:
+                        name: serv-llaunes
+                        port:
+                             number: 5000
