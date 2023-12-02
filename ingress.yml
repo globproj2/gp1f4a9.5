@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress #Tipus de manifest
 metadata:
-     name: ingr-calc # Nom del reverse proxy amb Ingress per accedir des del món exterior a un servei i partir del servei als pods amb l'aplicació.
-                     # Ingress és només un reverse proxy per kubernetes. 
+     name: ingr-revprox # Nom del reverse proxy amb Ingress per accedir des del món exterior a un servei i partir del servei als pods amb l'aplicació.
+                        # Ingress és només un reverse proxy per kubernetes. 
 spec:
      rules:
      - host: www.k8scalc.net # Nom de host pel servei. Amb ingress es pot utilitzar una mateixa IP per accedir a multiples hostname associats a serveis diferents
