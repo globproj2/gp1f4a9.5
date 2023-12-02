@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+     name: dep-calc
+spec:
+     replicas: 5
+     selector:
+          matchLabels:
+               app: calc-pods
+     template:
+          metadata:
+               labels:
+                    app: calc-pods
+          spec:
+               containers:
+               - name: calc-cont
+                 image: globproj2/app_operacions_millorada:3.5
+                 ports:
+                 - containerPort: 80
